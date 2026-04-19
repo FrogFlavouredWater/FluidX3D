@@ -622,6 +622,11 @@ void update_frame(const double frametime) {
 		XWarpPointer(x11_display, x11_window, x11_window, 0, 0, camera.width, camera.height, camera.width/2, camera.height/2); // center cursor
 		x11_cursor_movement_captured = false;
 	}
+#if defined(__APPLE__)
+	XSync(x11_display, False); // XQuartz can otherwise queue stale frames, causing delayed/jumpy display updates despite high internal FPS
+#else // Linux
+	XFlush(x11_display);
+#endif // macOS/Linux
 	XUnlockDisplay(x11_display);
 	//camera.clear_frame(); // clear frame
 }
@@ -721,7 +726,11 @@ int main(int argc, char* argv[]) {
 		window_offset_x = 0;
 		window_offset_y = 0;
 	}
-	if(fps_limit==0u) {
+	if(fps_limit==0u
+#if defined(__APPLE__)
+		||fps_limit<24u // XQuartz may report 1Hz, which would throttle interactive rendering to a crawl
+#endif // macOS
+		) {
 		fps_limit = 60u; // fallback to 60fps default
 	}
 

@@ -1,5 +1,7 @@
 bin/
 temp/
+src/build/
+src/setup
 stl/
 .vs/
 FluidX3D.vcxproj.user

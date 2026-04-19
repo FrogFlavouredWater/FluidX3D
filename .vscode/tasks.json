@@ -1,0 +1,78 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "FluidX3D: build macOS",
+      "type": "shell",
+      "command": "${workspaceFolder}/.vscode/run-fluidx3d-macos.sh",
+      "args": [
+        "--build-only"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [
+        "$gcc"
+      ]
+    },
+    {
+      "label": "FluidX3D: build active-file shim",
+      "type": "shell",
+      "command": "${workspaceFolder}/.vscode/run-fluidx3d-macos.sh",
+      "args": [
+        "--active-file-shim",
+        "${fileDirname}/${fileBasenameNoExtension}"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [
+        "$gcc"
+      ]
+    },
+    {
+      "label": "C/C++: clang build active file",
+      "dependsOn": "FluidX3D: build active-file shim",
+      "problemMatcher": [
+        "$gcc"
+      ]
+    },
+    {
+      "label": "C/C++: clang++ build active file",
+      "dependsOn": "FluidX3D: build active-file shim",
+      "problemMatcher": [
+        "$gcc"
+      ]
+    },
+    {
+      "label": "C/C++: g++ build active file",
+      "dependsOn": "FluidX3D: build active-file shim",
+      "problemMatcher": [
+        "$gcc"
+      ]
+    },
+    {
+      "label": "C/C++: g++-15 build active file",
+      "dependsOn": "FluidX3D: build active-file shim",
+      "problemMatcher": [
+        "$gcc"
+      ]
+    },
+    {
+      "label": "FluidX3D: run",
+      "type": "shell",
+      "command": "${workspaceFolder}/.vscode/run-fluidx3d-macos.sh",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "dependsOn": "FluidX3D: build macOS",
+      "problemMatcher": [
+
+      ]
+    }
+  ]
+}

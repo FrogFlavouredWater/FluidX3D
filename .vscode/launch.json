@@ -1,0 +1,143 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run FluidX3D",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/bin/FluidX3D",
+      "preLaunchTask": "FluidX3D: build macOS",
+      "env": {
+        "DISPLAY": ":0"
+      },
+      "terminal": "integrated",
+      "internalConsoleOptions": "neverOpen",
+      "presentation": {
+        "group": "FluidX3D",
+        "order": 1
+      }
+    },
+    {
+      "name": "Debug FluidX3D",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/bin/FluidX3D",
+      "preLaunchTask": "FluidX3D: build macOS",
+      "env": {
+        "DISPLAY": ":0"
+      },
+      "terminal": "integrated",
+      "internalConsoleOptions": "neverOpen",
+      "presentation": {
+        "group": "FluidX3D",
+        "order": 2
+      }
+    },
+    {
+      "name": "FluidX3D: debug",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/bin/FluidX3D",
+      "preLaunchTask": "FluidX3D: build macOS",
+      "env": {
+        "DISPLAY": ":0"
+      },
+      "terminal": "integrated",
+      "internalConsoleOptions": "neverOpen",
+      "presentation": {
+        "hidden": true
+      }
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/bin/FluidX3D",
+      "preLaunchTask": "FluidX3D: build macOS",
+      "env": {
+        "DISPLAY": ":0"
+      },
+      "terminal": "integrated",
+      "internalConsoleOptions": "neverOpen",
+      "presentation": {
+        "hidden": true
+      }
+    },
+    {
+      "name": "C/C++: clang build and debug active file",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/bin/FluidX3D",
+      "preLaunchTask": "FluidX3D: build macOS",
+      "env": {
+        "DISPLAY": ":0"
+      },
+      "terminal": "integrated",
+      "internalConsoleOptions": "neverOpen",
+      "presentation": {
+        "hidden": true
+      }
+    },
+    {
+      "name": "C/C++: clang++ build and debug active file",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/bin/FluidX3D",
+      "preLaunchTask": "FluidX3D: build macOS",
+      "env": {
+        "DISPLAY": ":0"
+      },
+      "terminal": "integrated",
+      "internalConsoleOptions": "neverOpen",
+      "presentation": {
+        "hidden": true
+      }
+    },
+    {
+      "name": "C/C++: g++ build and debug active file",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/bin/FluidX3D",
+      "preLaunchTask": "FluidX3D: build macOS",
+      "env": {
+        "DISPLAY": ":0"
+      },
+      "terminal": "integrated",
+      "internalConsoleOptions": "neverOpen",
+      "presentation": {
+        "hidden": true
+      }
+    },
+    {
+      "name": "C/C++: g++-15 build and debug active file",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "${workspaceFolder}",
+      "program": "${workspaceFolder}/bin/FluidX3D",
+      "preLaunchTask": "FluidX3D: build macOS",
+      "env": {
+        "DISPLAY": ":0"
+      },
+      "terminal": "integrated",
+      "internalConsoleOptions": "neverOpen",
+      "presentation": {
+        "hidden": true
+      }
+    }
+  ]
+}
